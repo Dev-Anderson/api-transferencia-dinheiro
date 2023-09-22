@@ -22,6 +22,6 @@ Desafio de nível intermediário.
 - [x] Criar a conexao com o banco de dados postgres 
 - [] Criar o diagrama das tabelas
 - [] Criar a tabela de usuario
-- [] Criar a tabela de transferencia 
+- [] Criar a tabela de transferencia   
 - [] Popular a tabela com alguns registro 
 - [] Verificar uma forma de criar a base de dados
