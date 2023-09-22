@@ -10,5 +10,6 @@ func HandlerRoutes() {
 	r := gin.Default()
 
 	r.GET("/", controllers.Home)
+	r.GET("/user", controllers.GetUsers)
 	r.Run(":8080")
 }
