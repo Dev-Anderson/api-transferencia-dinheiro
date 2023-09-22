@@ -18,7 +18,8 @@ Desafio de nível intermediário.
 
 ## Tarefas
 - [x] Criar a primeira rota
-- [x] Realizar o carregamento das variaveis de ambiente = OK
-- [] Criar a conexao com o banco de dados postgres 
+- [x] Realizar o carregamento das variaveis de ambiente
+- [x] Criar a conexao com o banco de dados postgres 
 - [] Criar a tabela com os campos necessarios 
 - [] Popular a tabela com alguns registro 
+- [] Verificar uma forma de criar a base de dados
