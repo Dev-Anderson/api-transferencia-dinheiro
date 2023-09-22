@@ -23,7 +23,7 @@ Desafio de nível intermediário.
 - [x] Criar o diagrama das tabelas
 - [x] Criar a tabela de usuario
 - [x] Adicionar uma rota para consulta de usuario 
-- [] Adicionar a rota de criar usuario
+- [x] Adicionar a rota de criar usuario
 - [] Criar a tabela de transferencia   
 - [] Popular a tabela com alguns registro 
 - [] Verificar uma forma de criar a base de dados

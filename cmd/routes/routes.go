@@ -11,5 +11,6 @@ func HandlerRoutes() {
 
 	r.GET("/", controllers.Home)
 	r.GET("/user", controllers.GetUsers)
+	r.POST("/user", controllers.CreateUser)
 	r.Run(":8080")
 }

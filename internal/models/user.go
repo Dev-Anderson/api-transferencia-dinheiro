@@ -44,3 +44,20 @@ func GetUser() ([]User, error) {
 	return users, nil
 
 }
+
+func CreateUser(u User) error {
+	db, err := database.ConnectionDB()
+	if err != nil {
+		panic(err)
+	}
+	defer db.Close()
+
+	query := fmt.Sprintf("INSERT INTO user_balance (name, cpf, balance_start, create_at) VALUES($1, $2, $3, now())")
+
+	_, err2 := db.Exec(query, u.Name, u.Cpf, u.BalanceStart)
+	if err2 != nil {
+		return err
+	}
+
+	return nil
+}
