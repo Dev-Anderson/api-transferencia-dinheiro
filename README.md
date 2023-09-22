@@ -15,3 +15,10 @@ Nesse desafio você tem a responsabilidade de criar um Restful API que provê fo
 Desafio de nível intermediário. 
 
 [Devgym](https://app.devgym.com.br)
+
+## Tarefas
+- [x] Criar a primeira rota
+- [x] Realizar o carregamento das variaveis de ambiente = OK
+- [] Criar a conexao com o banco de dados postgres 
+- [] Criar a tabela com os campos necessarios 
+- [] Popular a tabela com alguns registro 
