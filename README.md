@@ -24,6 +24,7 @@ Desafio de nível intermediário.
 - [x] Criar a tabela de usuario
 - [x] Adicionar uma rota para consulta de usuario 
 - [x] Adicionar a rota de criar usuario
+- [] Adicionar uma opcao para remover o usuario
 - [] Criar a tabela de transferencia   
 - [] Popular a tabela com alguns registro 
 - [] Verificar uma forma de criar a base de dados

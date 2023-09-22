@@ -61,3 +61,18 @@ func CreateUser(u User) error {
 
 	return nil
 }
+
+func DeleteUser(cpf string) error {
+	db, _ := database.ConnectionDB()
+
+	defer db.Close()
+
+	query := fmt.Sprintf("delete from user_balance where cpf = $1")
+	_, err := db.Exec(query, cpf)
+	if err != nil {
+		return err
+	}
+
+	return nil
+
+}

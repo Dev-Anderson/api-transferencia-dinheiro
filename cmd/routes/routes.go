@@ -12,5 +12,6 @@ func HandlerRoutes() {
 	r.GET("/", controllers.Home)
 	r.GET("/user", controllers.GetUsers)
 	r.POST("/user", controllers.CreateUser)
+	r.DELETE("/user/:cpf", controllers.DeleteUser)
 	r.Run(":8080")
 }

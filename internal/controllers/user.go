@@ -32,3 +32,12 @@ func CreateUser(c *gin.Context) {
 
 	c.JSON(http.StatusCreated, gin.H{"message": "user created sucess"})
 }
+
+func DeleteUser(c *gin.Context) {
+	cpf := c.Params.ByName("cpf")
+	if err := models.DeleteUser(cpf); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+	}
+
+	c.JSON(http.StatusOK, gin.H{"mensage": "user successfully deleted"})
+}
