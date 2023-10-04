@@ -1,4 +1,4 @@
-CREATE TABLE "user" (
+CREATE TABLE "user_balance" (
   "id" serial PRIMARY KEY,
   "name" string,
   "document" string,
@@ -6,7 +6,7 @@ CREATE TABLE "user" (
   "dateDelete" timestamp
 );
 
-CREATE TABLE "extractUser" (
+CREATE TABLE "extract_user" (
   "id" serial PRIMARY KEY,
   "typeOperation" string,
   "idUserOrigem" int,
@@ -22,8 +22,8 @@ CREATE TABLE "balance" (
   "value" numeric(15,2)
 );
 
-ALTER TABLE "extractUser" ADD FOREIGN KEY ("idUserOrigem") REFERENCES "user" ("id");
+ALTER TABLE "extract_user" ADD FOREIGN KEY ("idUserOrigem") REFERENCES "user_balance" ("id");
 
-ALTER TABLE "extractUser" ADD FOREIGN KEY ("idUserDestiny") REFERENCES "user" ("id");
+ALTER TABLE "extract_user" ADD FOREIGN KEY ("idUserDestiny") REFERENCES "user_balance" ("id");
 
-ALTER TABLE "balance" ADD FOREIGN KEY ("idUser") REFERENCES "user" ("id");
+ALTER TABLE "balance" ADD FOREIGN KEY ("idUser") REFERENCES "user_balance" ("id");
