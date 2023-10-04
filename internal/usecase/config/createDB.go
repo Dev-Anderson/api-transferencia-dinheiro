@@ -24,15 +24,15 @@ func TableUser() {
 	}
 	defer db.Close()
 
-	tableExists, err := verifyTable(db, "user")
+	tableExists, err := verifyTable(db, "USER_BALANCE")
 	if tableExists == false {
 		createTable := `
-			CREATE TABLE user_balance (
+			CREATE TABLE USER_BALANCE (
 				ID SERIAL PRIMARY KEY, 
-				NAME VARCHAR(255), 
-				CPF VARCHAR(20),
-				BALANCE_START FLOAT,  
-				CREATE_AT DATE
+				NAME TEXT, 
+				DOCUMENT TEXT,
+				DATE_CREATE TIMESTAMP,
+				DATE_DELETE TIMESTAMP
 			)
 		`
 		_, err := db.Exec(createTable)
