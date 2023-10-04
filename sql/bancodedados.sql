@@ -1,20 +1,29 @@
 CREATE TABLE "user" (
   "id" serial PRIMARY KEY,
-  "name" varchar,
-  "cpf" varchar,
-  "balance" float,
-  "created_at" timestamp
+  "name" string,
+  "document" string,
+  "dateCreate" timesamp,
+  "dateDelete" timesamp
 );
 
-CREATE TABLE "balance_extract" (
+CREATE TABLE "extractUser" (
   "id" serial PRIMARY KEY,
-  "id_user" int,
-  "balance" float,
-  "id_user_receive" int
+  "typeOperation" string,
+  "idUserOrigem" int,
+  "valueOrigem" numeric(15,2),
+  "idUserDestiny" int,
+  "valueDestiny" numeric(15,2),
+  "dateInsert" timesamp
 );
 
-COMMENT ON COLUMN "user"."cpf" IS 'Documento do usuario';
+CREATE TABLE "balance" (
+  "id" serial,
+  "idUser" int,
+  "value" numeric(15,2)
+);
 
-ALTER TABLE "balance_extract" ADD FOREIGN KEY ("id_user") REFERENCES "user" ("id");
+ALTER TABLE "extractUser" ADD FOREIGN KEY ("idUserOrigem") REFERENCES "user" ("id");
 
-ALTER TABLE "balance_extract" ADD FOREIGN KEY ("id_user_receive") REFERENCES "user" ("id");
+ALTER TABLE "extractUser" ADD FOREIGN KEY ("idUserDestiny") REFERENCES "user" ("id");
+
+ALTER TABLE "balance" ADD FOREIGN KEY ("idUser") REFERENCES "user" ("id");
