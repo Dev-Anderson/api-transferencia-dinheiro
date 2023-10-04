@@ -2,8 +2,8 @@ CREATE TABLE "user" (
   "id" serial PRIMARY KEY,
   "name" string,
   "document" string,
-  "dateCreate" timesamp,
-  "dateDelete" timesamp
+  "dateCreate" timestamp,
+  "dateDelete" timestamp
 );
 
 CREATE TABLE "extractUser" (
@@ -13,7 +13,7 @@ CREATE TABLE "extractUser" (
   "valueOrigem" numeric(15,2),
   "idUserDestiny" int,
   "valueDestiny" numeric(15,2),
-  "dateInsert" timesamp
+  "dateInsert" timestamp
 );
 
 CREATE TABLE "balance" (
