@@ -15,3 +15,9 @@ Nesse desafio você tem a responsabilidade de criar um Restful API que provê fo
 Desafio de nível intermediário. 
 
 [Devgym](https://app.devgym.com.br)
+
+## Como rodar a aplicação
+
+1. Clone do projeto
+2. Rodar o projeto ```go run .```
+3. Testar a rota home ``` localhost:8080\api\v1\home ```
