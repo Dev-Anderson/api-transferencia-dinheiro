@@ -6,4 +6,5 @@ type ConfigEnv struct {
 	UserDB     string
 	PasswordDB string
 	DBName     string
+	PortHttp   string
 }

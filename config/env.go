@@ -44,5 +44,6 @@ func LoadEnv() (schemas.ConfigEnv, error) {
 		UserDB:     os.Getenv("API-TRANSFERENCIA-USERDB"),
 		PasswordDB: os.Getenv("API-TRANSFERENCIA-PASSWORDDB"),
 		DBName:     os.Getenv("API-TRANSFERENCIA-DBNAME"),
+		PortHttp:   os.Getenv("API-TRANSFERENCIA-PORTHTTP"),
 	}, nil
 }
