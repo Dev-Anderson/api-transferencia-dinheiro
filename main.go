@@ -1,6 +1,7 @@
 package main
 
 import (
+	"api-transferencia/router"
 	"api-transferencia/usecase"
 	"fmt"
 )
@@ -12,6 +13,7 @@ func main() {
 	usecase.FKBalanceIDUserOrigin()
 	usecase.FKBalanceIDUserDestiny()
 	fmt.Println("")
+	router.Initialize()
 
 	// user := schemas.UserCreate{
 	// 	Name:     "Anderson",

@@ -40,3 +40,38 @@ func GetUser() ([]schemas.User, error) {
 
 	return users, nil
 }
+
+func GetUserID(id int) ([]schemas.User, error) {
+	db, err := database.ConnectDatabase()
+	if err != nil {
+		panic(err)
+	}
+	defer db.Close()
+
+	query := `
+		SELECT 
+			*
+		FROM "user"
+		WHERE id = $1`
+
+	rows, err := db.Query(query, id)
+	if err != nil {
+		fmt.Println("Error in get User", err.Error())
+	}
+	defer rows.Close()
+
+	var users []schemas.User
+	for rows.Next() {
+		var user schemas.User
+		if err := rows.Scan(&user.ID, &user.Name, &user.Document, &user.DateCreate, &user.Balance, &user.DateAtualization); err != nil {
+			fmt.Println(err)
+		}
+		users = append(users, user)
+	}
+
+	if err := rows.Err(); err != nil {
+		fmt.Println(err)
+	}
+
+	return users, nil
+}
