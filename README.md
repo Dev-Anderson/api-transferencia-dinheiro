@@ -16,6 +16,8 @@ Desafio de nível intermediário.
 
 [Devgym](https://app.devgym.com.br)
 
+verificar depois (testar a parte da criacao das FKs)
+
 ## Como rodar a aplicação
 
 1. Clone do projeto
