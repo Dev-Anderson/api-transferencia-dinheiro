@@ -7,5 +7,5 @@ import (
 )
 
 func Home(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"message": "API rodando com sucesso!"})
+	c.JSON(http.StatusOK, gin.H{"message": "API rodando com sucesso"})
 }
