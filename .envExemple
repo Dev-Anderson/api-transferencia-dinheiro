@@ -1,5 +1,6 @@
-db_host=""
-db_port=""
-db_user=""
-db_password=""
-db_name=""
+api_transferencia_db_host=
+api_transferencia_db_port=5432
+api_transferencia_db_user=
+api_transferencia_db_password=
+api_transferencia_db_name=apitransferencia
+api_transferencia_port_http=8080

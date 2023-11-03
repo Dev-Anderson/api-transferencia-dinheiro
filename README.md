@@ -2,16 +2,26 @@
 
 Nesse desafio você tem a responsabilidade de criar um Restful API que provê formas de transferir dinheiro de uma pessoa para outra. Cada usuário no sistema tem um saldo que é atualizado em cada transferência. 
 
-## Requisitos
+## O que precisa ter
+- Endpoint para consultar o saldo, repassando o ID do usuário
+- Endpoint para realizar uma transferência repassando os ID dos usuário e depois o valor monetário
+- Validação de saldo, caso saldo insuficiente apresentar uma mensagem para o usuário
+- Se uma transferencia falhar deverá retornar os saldos dos usúarios. 
 
-[x] Crie um endpoint que recebe dois IDs de usuários, e um valor monetário representando a transferência entre eles. 
-[x] Crie um endpoint que recebe um ID de usuário e retorna o saldo dele. 
-[x] Valide se o usuário de origem tem saldo suficiente antes da transferência. 
-[] É preciso pensar na possibilidade de concorrência de transferência onde duas pessoas transferem dinheiro ao mesmo tempo para uma terceira. 
-[x] Se uma transferência falhar, o saldo do usuário de origem deve ser restaurado. 
-[x] Não é necessário endpoints para criar usuário, popule o banco de forma com que os dois usuário existam e que transferências possam ser feitas entre eles. 
+## Tarefas
+[x] Endpoint para consultar o saldo repassando o ID do usuário <br>
+[x] Endpoint para realizar a transferência <br>
+[x] Rollback quando o usuário não tiver saldo <br>
+[] Pensar em uma forma de concorrência, caso dois usuário façam a transferência ao mesmo tempo para o mesmo usuário <br>
+[] Criar uma rota para criar usuários <br> 
+[] Adicionar testes para cada rota <br>
+[x] Função para criar as tabelas necessárias <br>
+[] Adicionar o docker<br>
+[] Adicionar o swagger <br>
+[] Endpoint para consultar todos os usuário <br>
+[] Endpoint para cadastro de conta <br>
+[] Endpoint para extrato <br>
 
-## Desafio baseado no seguinte site da Devgym
-Desafio de nível intermediário. 
-
+## Desafio baseado no site da Devgym
+ 
 [Devgym](https://app.devgym.com.br)
